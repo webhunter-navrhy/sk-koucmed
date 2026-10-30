@@ -1,0 +1,58 @@
+{% extends "_base.html" %}
+{% set titulek = 'KoUčMed – emočný koučing a vzťahové poradenstvo, Bratislava' %}
+{% set cesta = '' %}
+{% block obsah %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Mgr. Jana Mladá · Bratislava a online</p>
+      <h1>Lepšie porozumieť svojmu životu, vzťahom a emóciám</h1>
+      <p class="lead">Ak chcete zvládať emócie, nájsť východisko z trápenia, podporiť vzťah alebo výchovu detí a znovu objaviť svoje sebavedomie, ste tu správne. S klientmi to riešim už osem rokov.</p>
+      <p><a class="tlacitko" href="#kontakt">Napísať mi</a> <a class="tlacitko druhe" href="#o-mne">Viac o mne</a></p>
+    </div>
+    {{ img('omne.jpg', 'Jana Mladá, koučka a terapeutka', sizes='(min-width: 60rem) 34rem, 100vw') }}
+  </div>
+</section>
+<section class="sekce" id="sluzby">
+  <div class="wrap">
+    <h2>Služby</h2>
+    <ul role="list" class="karty">
+      {% for s in data.sluzby %}<li><h3>{{ s.nazev }}</h3><p>{{ s.popis }}</p></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+<section class="sekce tinted" id="ponuka">
+  <div class="wrap">
+    <h2>Ponuka a ceny</h2>
+    <p class="uvod">Ceny a dĺžku stretnutí si dohodnete priamo s Janou.</p>
+    <ul role="list" class="karty dva">
+      {% for s in data.ponuka %}<li><h3>{{ s.nazev }}</h3><p>{{ s.popis }}</p></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+<section class="sekce" id="clanky">
+  <div class="wrap">
+    <h2>Najnovšie články</h2>
+    <ul role="list" class="karty">
+      {% for c in data.clanky %}<li><p class="datum">{{ c.datum }}</p><h3>{{ c.nazev }}</h3><p>{{ c.popis }}</p><p><a href="{{ c.url }}">Prečítať článok »</a></p></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+<section class="sekce tinted" id="o-mne">
+  <div class="wrap uzky">
+    <h2>O mne</h2>
+    <p class="citat">Najpodstatnejším uvedomením v mojom živote bolo pochopenie, že sa veci dejú zvnútra von. Že zmeniť potrebujem svoje myšlienky a vnútorné nastavenia, nie ľudí a vonkajšie okolnosti.</p>
+    <p>Keď som začala pracovať na svojich myšlienkach, pocitoch a presvedčeniach, začal sa meniť svet okolo mňa. Dnes sa mi žije ľahšie, nevytočím sa pri každej maličkosti a mám rada samú seba. Túto skúsenosť odovzdávam klientom a sprevádzam ich na ceste k životu, kde prevláda pokoj, láska, rešpekt a spokojnosť.</p>
+  </div>
+</section>
+<section class="sekce" id="kontakt">
+  <div class="wrap kontakt-grid">
+    <div>
+      <h2>Kontakt</h2>
+      <p>S klientmi sa stretávam v Bratislave na Lachovej 26 (Petržalka) alebo online cez Skype, Messenger, WhatsApp či Zoom.</p>
+      <p><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></p>
+    </div>
+    {% include "_formular.html" %}
+  </div>
+</section>
+{% endblock %}

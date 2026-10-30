@@ -1,0 +1,55 @@
+{
+ "slug": "sk-koucmed",
+ "nazev": "KoUčMed",
+ "url": "https://webhunter-navrhy.github.io/sk-koucmed/",
+ "base": "/sk-koucmed/",
+ "lang": "sk",
+ "popis": "Emočný koučing, etikoterapia, vzťahová mediácia a poradenstvo pre rodičov v Bratislave aj online. Mgr. Jana Mladá – KoUčMed.",
+ "navrh": true,
+ "domena": "",
+ "og_image": "placeholder.jpg",
+ "logo": "logo.png",
+ "theme_color": "#ffffff",
+ "typ": "ProfessionalService",
+ "ico": "46408142",
+ "kontakt": {
+  "email": "jana.mlada@koucmed.sk",
+  "telefon": "0944 581 222",
+  "adresa": {
+   "ulice": "Lachova 26",
+   "psc": "851 03",
+   "mesto": "Bratislava",
+   "zeme": "SK"
+  }
+ },
+ "oteviraci_doba": [],
+ "sameas": [],
+ "cenove_rozpeti": "",
+ "formular": {
+  "endpoint": "",
+  "demo": true,
+  "predmet": "Správa z webu KoUčMed"
+ },
+ "nav": [
+  {
+   "text": "Služby",
+   "href": "#sluzby"
+  },
+  {
+   "text": "Ponuka",
+   "href": "#ponuka"
+  },
+  {
+   "text": "Články",
+   "href": "#clanky"
+  },
+  {
+   "text": "O mne",
+   "href": "#o-mne"
+  },
+  {
+   "text": "Kontakt",
+   "href": "#kontakt"
+  }
+ ]
+}
